@@ -10,7 +10,7 @@ API
 >
 > - [x] The API Proxy should be in .Net Standard 2.0.
 > - [x] Be sure to add at least one Unit Test to the API Proxy.
-> - [ ] You should create a Nuget Package from the Proxy and publish it
+> - [x] You should create a Nuget Package from the Proxy and publish it
 >   to Local Nuget.
 > - Create a simple console app that pulls in the Nuget package and uses
 >   the Proxy methods to:
