@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -53,6 +53,34 @@ namespace StarWars.WebApi.Proxy.Tests
             foreach (CharacterModel character in characters)
             {
                 Assert.AreEqual(allegiance, character.Allegiance);
+            }
+        }
+
+        [DataRow(Trilogy.None)]
+        [DataRow(Trilogy.Original)]
+        [DataRow(Trilogy.Prequel)]
+        [DataRow(Trilogy.Sequel)]
+        [TestMethod]
+        public void ListCharactersByTrilogyAsyncReturnsOnlyCharactersFromThatTrilogy(
+            Trilogy trilogy
+        )
+        {
+            // Arrange
+            StarWarsProxy proxy = new StarWarsProxy();
+
+            // Act
+            IList<CharacterModel> characters = proxy
+                .ListCharactersByTrilogyAsync(trilogy)
+                .Result;
+
+            // Assert
+            if (characters.Count == 0)
+            {
+                Assert.Inconclusive();
+            }
+            foreach (CharacterModel character in characters)
+            {
+                Assert.AreEqual(trilogy, character.TrilogyIntroducedIn);
             }
         }
     }
