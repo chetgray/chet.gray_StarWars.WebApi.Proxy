@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>Star Wars API Access</Title>
+    <Copyright>Copyright © Waystar 2023</Copyright>
+    <PackageProjectUrl>https://tfs.waystar.com/Waystar/Education/_git/chet.gray_StarWars.WebApi.Proxy</PackageProjectUrl>
+    <RepositoryUrl>https://tfs.waystar.com/Waystar/Education/_git/chet.gray_StarWars.WebApi.Proxy</RepositoryUrl>
+    <PackageReleaseNotes>Initial release
+
+- ✨ feat: add models from StarWar.ConsoleApp
+- ✨ feat(Proxy): add `ApiHelper` from `StarWars.ConsoleApp`
+- ✨ feat: adapt `StarWarsProxy` from `StarWars.ConsoleApp.CharacterBL`</PackageReleaseNotes>
+    <Authors>Chet Gray &lt;chet.gray@waystar.com&gt;</Authors>
+    <Company>Waystar</Company>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
 
 </Project>
